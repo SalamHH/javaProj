@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-class Oblig2{
+class Graf{
 
   private static HashMap<Movie,LinkedList<Actor>> mapping = new HashMap<>();
   private static HashMap<String,Movie> movieMapping = new HashMap<>();
@@ -9,30 +9,30 @@ class Oblig2{
 
   public static void main(String [] args){
 
-    Oblig2 o = new Oblig2();
+    Graf g = new Graf();
     System.out.println("--------------------------------------- \n");
 
     System.out.println("antall noder og kanter:");
-    o.readMovies();
-    o.readNodes();
-    System.out.println(o.countEdges());
-    System.out.println(o.countNodes());
+    g.readMovies();
+    g.readNodes();
+    System.out.println(g.countEdges());
+    System.out.println(g.countNodes());
     System.out.println("--------------------------------------- \n");
 
     System.out.println("korteste sti:");
-    System.out.println(o.findWay("nm2255973","nm0000460"));
-    System.out.println(o.findWay("nm0424060","nm0000243"));
-    System.out.println(o.findWay("nm4689420","nm0000365"));
-    System.out.println(o.findWay("nm0000288","nm0001401"));
-    System.out.println(o.findWay("nm0031483","nm0931324"));
+    System.out.println(g.findWay("nm2255973","nm0000460"));
+    System.out.println(g.findWay("nm0424060","nm0000243"));
+    System.out.println(g.findWay("nm4689420","nm0000365"));
+    System.out.println(g.findWay("nm0000288","nm0001401"));
+    System.out.println(g.findWay("nm0031483","nm0931324"));
     System.out.println("--------------------------------------- \n");
 
     System.out.println("beste sti:");
-    System.out.println(o.findChillWay("nm2255973","nm0000460"));
-    System.out.println(o.findChillWay("nm0424060","nm0000243"));
-    System.out.println(o.findChillWay("nm4689420","nm0000365"));
-    System.out.println(o.findChillWay("nm0000288","nm0001401"));
-    System.out.println(o.findChillWay("nm0031483","nm0931324"));
+    System.out.println(g.findChillWay("nm2255973","nm0000460"));
+    System.out.println(g.findChillWay("nm0424060","nm0000243"));
+    System.out.println(g.findChillWay("nm4689420","nm0000365"));
+    System.out.println(g.findChillWay("nm0000288","nm0001401"));
+    System.out.println(g.findChillWay("nm0031483","nm0931324"));
     System.out.println("--------------------------------------- \n");
 
 
